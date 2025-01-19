@@ -16,9 +16,65 @@ body {
     height: 7%;
     width: 100%;
     background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.options {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    position: absolute;
+    right: 5%;
 }
 
 .bottom {
     height: 93%;
     width: 100%;
+}
+
+.login-wrapper {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-button-container {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-button {
+    height: 100%;
+    width: 5%;
+}
+
+.register-wrapper {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-button-container {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.register-button {
+    height: 100%;
+    width: 5%;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.settings {
+    color: white;
 }
