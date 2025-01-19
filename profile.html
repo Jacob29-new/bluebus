@@ -11,7 +11,7 @@
         <div class="options">
             <div class="login-wrapper">
                 <div class="login-button-container">
-                    <button id="login-button" onclick="loginPressed()" class="login-button">login</button>
+                    <button id="login-button" onclick="loginPressed()" class="good_button">login</button>
                 </div>
                 <form class="login-form" id="login-form">
                     <input type="text" placeholder="Username" class="inputs" id="login_username">
@@ -22,7 +22,7 @@
     
             <div class="register-wrapper">
                 <div class="register-button-container">
-                    <button id="register-button" onclick="registerPressed()" class="register-button">register</button>
+                    <button id="register-button" onclick="registerPressed()" class="good_button">register</button>
                 </div>
                 <form class="register-form" id="register-form">
                     <input type="text" placeholder="Username" class="inputs" id="register_username">
@@ -31,7 +31,12 @@
                     <input type="button" value="Create account" class="submit-button" onclick="createAccount()"></button>
                 </form>
             </div>
-            <div class="settings">settings</div>
+            <div class="settings" id="settings">
+                <div id="settings_name"></div>
+                <div class="icon_container">
+                    <img src="settings_icon.svg" alt="">
+                </div>
+            </div>
         </div>
     </div>
     <div class="bottom"></div>

@@ -49,7 +49,7 @@ body {
     justify-content: flex-end;
 }
 
-.login-button {
+.good_button {
     height: 100%;
     width: 38%;
     font-family: monospace;
@@ -67,12 +67,6 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-}
-
-.register-button {
-    height: 100%;
-    width: 38%;
-    font-family: monospace;
 }
 .login-form {
     display: flex;
@@ -122,6 +116,30 @@ body {
     opacity: 1;
 }
 
+.no_display {
+    display: none;
+}
+
 .magenta {
     background-image: linear-gradient(black, magenta);
+}
+
+.settings {
+    display: none;
+    flex-direction: row;
+    height: 75%;
+    justify-content: space-evenly;
+    width: 7%;
+}
+
+.settings_name {
+    color: white;
+}
+
+.icon_container {
+    height: 100%;
+}
+
+.icon {
+    height: 100%;
 }

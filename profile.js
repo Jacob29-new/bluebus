@@ -44,6 +44,7 @@ function createAccount() {
 }
 
 function loginToAccount() {
+
     everythingCorrect = true;
     const username = document.getElementById("login_username").value
     const password = document.getElementById("login_password").value
@@ -52,13 +53,25 @@ function loginToAccount() {
         if(users[i].username === username) {
             if(users[i].password === password) {
                 loginPressed()
+                const lb = document.getElementById("login-button")
+                const rb = document.getElementById("register-button")
+                lb.classList.add("no_display")
+                rb.classList.add("no_display")
                 setTimeout(function() {
                     if(everythingCorrect === true) {
                         alert("sucesfully logged in")
+                        displaySettings(users[i].username)
                     }
                 },100)
             }
         }
     }
 
+}
+
+function displaySettings(username) {
+    const settings = document.getElementById("settings");
+    settings.style.display = "flex"; 
+    const settings_name = document.getElementById("settings_name")
+    settings_name.innerText = username
 }
