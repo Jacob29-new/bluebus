@@ -1,0 +1,24 @@
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    height: 6%;
+    width: 100%;
+    background-color: black;
+}
+
+.bottom {
+    height: 94%;
+    width: 100%;
+}
