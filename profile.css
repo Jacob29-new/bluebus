@@ -75,6 +75,12 @@ body {
     overflow: visible;
 }
 
+.register-form {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
 .settings {
     color: white;
 }
