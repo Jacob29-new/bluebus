@@ -42,3 +42,23 @@ function createAccount() {
 
     console.log("users:", users)
 }
+
+function loginToAccount() {
+    everythingCorrect = true;
+    const username = document.getElementById("login_username").value
+    const password = document.getElementById("login_password").value
+
+    for(let i = 0; i < users.length; i++) {
+        if(users[i].username === username) {
+            if(users[i].password === password) {
+                loginPressed()
+                setTimeout(function() {
+                    if(everythingCorrect === true) {
+                        alert("sucesfully logged in")
+                    }
+                },100)
+            }
+        }
+    }
+
+}
