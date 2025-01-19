@@ -14,10 +14,9 @@
                     <button id="login-button" onclick="loginPressed()" class="login-button">login</button>
                 </div>
                 <form class="login-form" id="login-form">
-                    <input type="text" placeholder="Username" class="inputs">
-                    <input type="password" placeholder="Password" class="inputs">
-                    <input type="text" placeholder="Email" class="inputs">
-                    <input type="button" value="create account" class="submit-button"></button>
+                    <input type="text" placeholder="Username" class="inputs" id="login_username">
+                    <input type="password" placeholder="Password" class="inputs" id="login_password">
+                    <input type="button" value="login" class="submit-button"></button>
                 </form>
             </div>
     
@@ -26,9 +25,10 @@
                     <button id="register-button" onclick="registerPressed()" class="register-button">register</button>
                 </div>
                 <form class="register-form" id="register-form">
-                    <input type="text" placeholder="Username" class="inputs">
-                    <input type="password" placeholder="Password" class="inputs">
-                    <input type="button" value="SUB" class="submit-button"></button>
+                    <input type="text" placeholder="Username" class="inputs" id="register_username">
+                    <input type="password" placeholder="Password" class="inputs" id="register_password">
+                    <input type="text" placeholder="Email" class="inputs" id="register_email">
+                    <input type="button" value="Create account" class="submit-button" onclick="createAccount()"></button>
                 </form>
             </div>
             <div class="settings">settings</div>

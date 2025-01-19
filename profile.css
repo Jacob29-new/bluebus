@@ -110,6 +110,7 @@ body {
     width: 69%;
     height: 14%;
     border: 1px solid magenta;
+    font-family: monospace;
 }
 
 .submit-button {

@@ -1,3 +1,5 @@
+var users = []
+
 function loginPressed() {
     var login = document.getElementById("login-form")
     login.classList.toggle("opacity")
@@ -10,4 +12,33 @@ function registerPressed() {
     register.classList.toggle("opacity")
     var register_button = document.getElementById("register-button")
     register_button.classList.toggle("magenta")
+}
+
+function createAccount() {
+
+    let everythingCorrect = true;
+    const username = document.getElementById("register_username")
+    const password = document.getElementById("register_password")
+    const email = document.getElementById("register_email")
+
+    const user = {
+        "username": username.value,
+        "password": password.value,
+        "email": email.value
+    }
+
+    users.push(user)
+
+    username.value = ""
+    password.value = ""
+    email.value = ""
+
+    registerPressed()
+    setTimeout(function() {
+        if(everythingCorrect === true) {
+            alert("account sucesfully created")
+        }
+    },100)
+
+    console.log("users:", users)
 }
