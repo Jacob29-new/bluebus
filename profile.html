@@ -11,23 +11,23 @@
         <div class="options">
             <div class="login-wrapper">
                 <div class="login-button-container">
-                    <button id="login-button">log in</button>
+                    <button id="login-button" onclick="loginPressed()">log in</button>
                 </div>
-                <form class="login-form">
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
-                    <input type="button" value="SUB"></button>
+                <form class="login-form" id="login-form">
+                    <input type="text" placeholder="Username" class="inputs">
+                    <input type="password" placeholder="Password" class="inputs">
+                    <input type="button" value="SUB" class="submit-button"></button>
                 </form>
             </div>
     
             <div class="register-wrapper">
                 <div class="register-button-container">
-                    <button id="register-button">register</button>
+                    <button id="register-button" onclick="registerPressed()">register</button>
                 </div>
-                <form class="register-form">
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
-                    <input type="button" value="SUB"></button>
+                <form class="register-form" id="register-form">
+                    <input type="text" placeholder="Username" class="inputs">
+                    <input type="password" placeholder="Password" class="inputs">
+                    <input type="button" value="SUB" class="submit-button"></button>
                 </form>
             </div>
             <div class="settings">settings</div>
