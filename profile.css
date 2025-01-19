@@ -51,7 +51,8 @@ body {
 
 .login-button {
     height: 100%;
-    width: 5%;
+    width: 38%;
+    font-family: monospace;
 }
 
 .register-wrapper {
@@ -70,7 +71,8 @@ body {
 
 .register-button {
     height: 100%;
-    width: 5%;
+    width: 38%;
+    font-family: monospace;
 }
 .login-form {
     display: flex;
@@ -83,7 +85,7 @@ body {
     background-image: linear-gradient(black, purple);
     border: magenta 1px solid;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.25s;
 }
 
 .register-form {
@@ -97,7 +99,7 @@ body {
     background-image: linear-gradient(black, purple);
     border: magenta 1px solid;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 0.25s;
 }
 
 .settings {
@@ -117,4 +119,8 @@ body {
 
 .opacity {
     opacity: 1;
+}
+
+.magenta {
+    background-image: linear-gradient(black, magenta);
 }
