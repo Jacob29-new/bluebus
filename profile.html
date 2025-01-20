@@ -32,14 +32,29 @@
                 </form>
             </div>
             <div class="settings" id="settings">
-                <div id="settings_name"></div>
-                <div class="icon_container">
-                    <img src="settings_icon.svg" alt="">
+                <div id="settings_name" class="settings_name"></div>
+                <div class="icon_container" onclick="showSettingsBox()">
+                    <img src="settings_icon.svg" alt="" class="icon">
                 </div>
             </div>
         </div>
     </div>
-    <div class="bottom"></div>
+    <div class="bottom" id="bottom">
+        <div class="settings_box" id="settings_box">
+            <div class="paired">
+                <div id="sb_name_display" class="sb_class_1"></div>
+            </div>
+            <div class="paired">
+                <div id="sb_password_display" class="sb_class_1"></div>
+                <input type="text" id="sb_password_input" class="sb_class_2">
+            </div>
+            <div class="paired">
+                <div id="sb_email_display" class="sb_class_1"></div>
+                <input type="text" id="sb_email_input" class="sb_class_2">
+            </div>
+            <button class="sb_button" onclick="changeInfo()"></button>
+        </div>
+    </div>
     <script src="profile.js"></script>
 </body>
 </html>
