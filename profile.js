@@ -3,6 +3,8 @@ var loggedInUser = []
 function loginPressed() {
     var login = document.getElementById("login-form")
     login.classList.toggle("opacity")
+    var login = document.getElementById("login-wrapper")
+    login.classList.toggle("login_height")
     var login_button = document.getElementById("login-button")
     login_button.classList.toggle("magenta")
 }
@@ -29,6 +31,31 @@ function createAccount() {
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
+    for(let i = 0; i < users.length; i++) {
+        if(users[i].username === user.username) {
+            alert("username is taken")
+            username.value = ""
+            password.value = ""
+            email.value = ""
+            console.log(users)
+            return;
+        }
+    }
+
+    if(user.email === "") {
+        alert("please fill in email")
+        return;
+    }
+
+    if(user.password === "") {
+        alert("please fill in password")
+        return;
+    }
+
+    if(user.username === "") {
+        alert("please fill in username")
+        return;
+    }
     users.push(user);
 
     localStorage.setItem("users", JSON.stringify(users));
@@ -108,6 +135,36 @@ function showSettingsBox() {
     email.innerHTML = "Current email: " + loggedInUser[0].email
 }
 
-function switchToInfo() {
-    
+function switchTab() {
+    var settings_container = document.getElementById("settings_container")
+    settings_container.classList.toggle("no_display")
+    var sb_top_item_info = document.getElementById("sb_top_item_info")
+    sb_top_item_info.classList.toggle("gray")
+    var sb_top_item_settings = document.getElementById("sb_top_item_settings")
+    sb_top_item_settings.classList.toggle("black")
+}
+
+function changeInfo() {
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    for(let i = 0; i < users.length; i++) {
+        if(users[i].username === loggedInUser[0].username) {
+            
+            let email = document.getElementById("sb_email_input")
+            let password = document.getElementById("sb_password_input")
+
+            if(email.value !== "") {
+                users[i].email = email.value
+                document.getElementById("sb_email_display").innerHTML = "Current email: " + email.value;
+                email.value = ""
+            }
+            if(password.value !== "") {
+                users[i].password = password.value
+                document.getElementById("sb_password_display").innerHTML = "Current password: " + password.value;
+                password.value = ""
+            }
+
+            localStorage.setItem("users", JSON.stringify(users));
+            console.log("User information updated:", users[i])
+        }
+    }
 }

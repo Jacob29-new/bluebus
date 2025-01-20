@@ -9,7 +9,7 @@
 <body>
     <div class="top">
         <div class="options">
-            <div class="login-wrapper">
+            <div class="login-wrapper" id="login-wrapper">
                 <div class="login-button-container">
                     <button id="login-button" onclick="loginPressed()" class="good_button">login</button>
                 </div>
@@ -42,21 +42,24 @@
     <div class="bottom" id="bottom">
         <div class="settings_box" id="settings_box">
             <div class="sb_top" id="sb_top">
-                <div class="sb_top_item" id="sb_top_item_settings" onclick="switchToSettings()">settings</div>
-                <div class="sb_top_item" id="sb_top_item_info" onclick="switchToInfo()">info</div>
+                <button class="sb_top_item" id="sb_top_item_settings" onclick="switchTab()">settings</button>
+                <button class="sb_top_item" id="sb_top_item_info" onclick="switchTab()">info</button>
             </div>
-            <div class="paired">
-                <div id="sb_name_display" class="sb_class_1"></div>
+            <div id="settings_container">
+                <div class="paired">
+                    <div id="sb_name_display" class="sb_class_1"></div>
+                </div>
+                <div class="paired">
+                    <div id="sb_password_display" class="sb_class_1"></div>
+                    <input type="text" id="sb_password_input" class="sb_class_2" placeholder="Change password">
+                </div>
+                <div class="paired">
+                    <div id="sb_email_display" class="sb_class_1"></div>
+                    <input type="text" id="sb_email_input" class="sb_class_2" placeholder="Change email">
+                </div>
+                <button class="sb_button" onclick="changeInfo()">Confirm</button>
             </div>
-            <div class="paired">
-                <div id="sb_password_display" class="sb_class_1"></div>
-                <input type="text" id="sb_password_input" class="sb_class_2" placeholder="Change password">
-            </div>
-            <div class="paired">
-                <div id="sb_email_display" class="sb_class_1"></div>
-                <input type="text" id="sb_email_input" class="sb_class_2" placeholder="Change email">
-            </div>
-            <button class="sb_button" onclick="changeInfo()">Confirm</button>
+            <div id="info_container"></div>
         </div>
     </div>
     <script src="profile.js"></script>

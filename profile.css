@@ -40,9 +40,12 @@ body {
     width: 30%;
     display: flex;
     flex-direction: column;
-    height: 643%;
+    height: 0%;
 }
 
+.login_height {
+    height: 643%;
+}
 .login-button-container {
     height: 10%;
     width: 100%;
@@ -51,7 +54,7 @@ body {
 }
 
 .good_button {
-    height: 100%;
+    height: 2vw;
     width: 38%;
     font-family: monospace;
 }
@@ -80,7 +83,6 @@ body {
     background-image: linear-gradient(black, purple);
     border: magenta 1px solid;
     opacity: 0;
-    transition: opacity 0.25s;
 }
 
 .register-form {
@@ -118,7 +120,7 @@ body {
 }
 
 .no_display {
-    display: none;
+    display: none !important;
 }
 
 .flex_display {
@@ -217,7 +219,7 @@ body {
     height: 9%;
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: black;
 }
 
 .sb_top_item {
@@ -227,8 +229,37 @@ body {
     align-items: center;
     justify-content: center;
     border-right: 1px solid black;
+    border-bottom: none;
+    color: white;
+    background-color: black;
 }
 
 #sb_top_item_settings {
     background-color: #3f3e3e;
+    border-bottom: none;
 }
+
+#settings_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info_container {
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gray {
+    background-color: #3f3e3e;
+}
+
+.black {
+    background-color: black !important;
+}
+
