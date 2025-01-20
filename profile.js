@@ -152,6 +152,11 @@ function changeInfo() {
             let email = document.getElementById("sb_email_input")
             let password = document.getElementById("sb_password_input")
 
+            if(password.value == "" && email.value == "") {
+                alert("Nothing to change")
+                return;
+             }
+
             if(email.value !== "") {
                 users[i].email = email.value
                 document.getElementById("sb_email_display").innerHTML = "Current email: " + email.value;
@@ -163,8 +168,10 @@ function changeInfo() {
                 password.value = ""
             }
 
+
             localStorage.setItem("users", JSON.stringify(users));
             console.log("User information updated:", users[i])
+            console.log("list of users: ", users)
         }
     }
 }
