@@ -178,10 +178,12 @@ body {
     display: none;
     flex-direction: column;
     align-items: center;
+    background-color: #3f3e3e;
 }
 
 .sb_class_1 {
-
+    font-family: monospace;
+    color: white;
 }
 
 .paired {
@@ -199,7 +201,34 @@ body {
 
 .sb_class_2 {
     width: 78%;
-    font-size: 124%;
+    font-size: 95%;
     color: black;
     height: 40%;
+}
+
+.sb_button {
+    height: 9%;
+    width: 25%;
+    margin-top: 5%;
+}
+
+.sb_top {
+    width: 100%;
+    height: 9%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+.sb_top_item {
+    height: 100%;
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid black;
+}
+
+#sb_top_item_settings {
+    background-color: #3f3e3e;
 }

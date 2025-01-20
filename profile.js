@@ -102,8 +102,12 @@ function showSettingsBox() {
     name.innerHTML = loggedInUser[0].username
 
     const password = document.getElementById("sb_password_display")
-    password.innerHTML = "Current password:" + loggedInUser[0].password
+    password.innerHTML = "Current password: " + loggedInUser[0].password
 
     const email = document.getElementById("sb_email_display")
-    email.innerHTML = "Current email:" + loggedInUser[0].email
+    email.innerHTML = "Current email: " + loggedInUser[0].email
+}
+
+function switchToInfo() {
+    
 }

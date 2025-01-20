@@ -41,18 +41,22 @@
     </div>
     <div class="bottom" id="bottom">
         <div class="settings_box" id="settings_box">
+            <div class="sb_top" id="sb_top">
+                <div class="sb_top_item" id="sb_top_item_settings" onclick="switchToSettings()">settings</div>
+                <div class="sb_top_item" id="sb_top_item_info" onclick="switchToInfo()">info</div>
+            </div>
             <div class="paired">
                 <div id="sb_name_display" class="sb_class_1"></div>
             </div>
             <div class="paired">
                 <div id="sb_password_display" class="sb_class_1"></div>
-                <input type="text" id="sb_password_input" class="sb_class_2">
+                <input type="text" id="sb_password_input" class="sb_class_2" placeholder="Change password">
             </div>
             <div class="paired">
                 <div id="sb_email_display" class="sb_class_1"></div>
-                <input type="text" id="sb_email_input" class="sb_class_2">
+                <input type="text" id="sb_email_input" class="sb_class_2" placeholder="Change email">
             </div>
-            <button class="sb_button" onclick="changeInfo()"></button>
+            <button class="sb_button" onclick="changeInfo()">Confirm</button>
         </div>
     </div>
     <script src="profile.js"></script>
