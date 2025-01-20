@@ -24,7 +24,7 @@ body {
     width: 60%;
     display: flex;
     justify-content: space-between;
-    height: 100%;
+    height: 6%;
     position: absolute;
     right: 5%;
     top: 1%;
@@ -40,7 +40,7 @@ body {
     width: 30%;
     display: flex;
     flex-direction: column;
-    height: 44%;
+    height: 643%;
 }
 
 .login-button-container {
@@ -60,7 +60,7 @@ body {
     width: 30%;
     display: flex;
     flex-direction: column;
-    height: 44%;
+    height: 643%;
 }
 
 .register-button-container {
@@ -132,7 +132,7 @@ body {
 .settings {
     display: none;
     flex-direction: row;
-    height: 5%;
+    height: 65%;
     justify-content: space-evenly;
     width: 8%;
     &:hover {
@@ -198,6 +198,8 @@ body {
 }
 
 .sb_class_2 {
-    width: 50%;
-    font-size: 2vw;
+    width: 78%;
+    font-size: 124%;
+    color: black;
+    height: 40%;
 }
