@@ -55,19 +55,13 @@ function loginToAccount() {
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    if(username === "admin" && password === "12345") {
-        loginPressed()
-        const lb = document.getElementById("login-button")
-        const rb = document.getElementById("register-button")
-        lb.classList.add("no_display")
-        rb.classList.add("no_display")
-        setTimeout(function() {
-            if(everythingCorrect === true) {
-                alert("sucesfully logged in")
-                displaySettings(username)
-            }
-        },100)
-    }
+    const admin1 = {
+        "username": "admin",
+        "password": "12345",
+        "email": "admin@gmail.com"
+    } 
+
+    users.push(admin1);
 
     for(let i = 0; i < users.length; i++) {
         if(users[i].username === username) {
