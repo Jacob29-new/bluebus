@@ -9,6 +9,7 @@
 <body>
     <div class="top">
         <div class="options">
+            <button id="logout" class="logout" onclick="logout()">logout</button>
             <div class="login-wrapper" id="login-wrapper">
                 <div class="login-button-container">
                     <button id="login-button" onclick="loginPressed()" class="good_button">login</button>
@@ -20,7 +21,7 @@
                 </form>
             </div>
     
-            <div class="register-wrapper">
+            <div class="register-wrapper" id="register-wrapper">
                 <div class="register-button-container">
                     <button id="register-button" onclick="registerPressed()" class="good_button">register</button>
                 </div>
@@ -32,7 +33,7 @@
                 </form>
             </div>
             <div class="settings" id="settings">
-                <div id="settings_name" class="settings_name"></div>
+                <div id="settings_name" class="settings_name" onclick="showSettingsBox()"></div>
                 <div class="icon_container" onclick="showSettingsBox()">
                     <img src="settings_icon.svg" alt="" class="icon">
                 </div>

@@ -1,4 +1,7 @@
 var loggedInUser = []
+var boxIsActive = false;
+var loginBoxOpen = false;
+var registerBoxOpen = false;
 
 function loginPressed() {
     var login = document.getElementById("login-form")
@@ -10,6 +13,7 @@ function loginPressed() {
 }
 
 function registerPressed() {
+    registerBoxOpen = ! registerBoxOpen
     var register = document.getElementById("register-form")
     register.classList.toggle("opacity")
     var register_button = document.getElementById("register-button")
@@ -75,20 +79,12 @@ function createAccount() {
 }
 
 function loginToAccount() {
-
+    
     everythingCorrect = true;
     const username = document.getElementById("login_username").value
     const password = document.getElementById("login_password").value
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
-
-    const admin1 = {
-        "username": "admin",
-        "password": "12345",
-        "email": "admin@gmail.com"
-    } 
-
-    users.push(admin1);
 
     for(let i = 0; i < users.length; i++) {
         if(users[i].username === username) {
@@ -100,10 +96,19 @@ function loginToAccount() {
                 const rb = document.getElementById("register-button")
                 lb.classList.add("no_display")
                 rb.classList.add("no_display")
+                let logout = document.getElementById("logout")
+                logout.classList.toggle("flex_display")
+                const lb1 = document.getElementById("login-wrapper")
+                const rb1 = document.getElementById("register-wrapper")
+                lb1.classList.add("no_display")
+                rb1.classList.add("no_display")
                 setTimeout(function() {
+                displaySettings(users[i].username)
+                if(registerBoxOpen === true) {
+                    registerPressed()
+                }
                     if(everythingCorrect === true) {
                         alert("sucesfully logged in")
-                        displaySettings(users[i].username)
                     }
                 },100)
             }
@@ -119,7 +124,8 @@ function displaySettings(username) {
     settings_name.innerText = username
 }
 
-function showSettingsBox() {
+function showSettingsBox() { 
+    boxIsActive = ! boxIsActive
     const bottom = document.getElementById("bottom")
     bottom.classList.toggle("center")
     const box = document.getElementById("settings_box")
@@ -159,11 +165,13 @@ function changeInfo() {
 
             if(email.value !== "") {
                 users[i].email = email.value
+                loggedInUser[0].email = email.value
                 document.getElementById("sb_email_display").innerHTML = "Current email: " + email.value;
                 email.value = ""
             }
             if(password.value !== "") {
                 users[i].password = password.value
+                loggedInUser[0].password = password.value
                 document.getElementById("sb_password_display").innerHTML = "Current password: " + password.value;
                 password.value = ""
             }
@@ -174,4 +182,23 @@ function changeInfo() {
             console.log("list of users: ", users)
         }
     }
+}
+
+function logout() {
+    const lb = document.getElementById("login-button")
+    const rb = document.getElementById("register-button")
+    lb.classList.remove("no_display")
+    rb.classList.remove("no_display")
+    let logout = document.getElementById("logout")
+    logout.classList.toggle("flex_display")
+    const lb1 = document.getElementById("login-wrapper")
+    const rb1 = document.getElementById("register-wrapper")
+    lb1.classList.remove("no_display")
+    rb1.classList.remove("no_display")
+    const settings = document.getElementById("settings");
+    settings.style.display = "none";
+    if(boxIsActive === true) {
+        showSettingsBox()
+    }
+    alert("logged out of account")
 }

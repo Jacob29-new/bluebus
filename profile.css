@@ -176,7 +176,7 @@ body {
 .settings_box {
     height: 57%;
     width: 42%;
-    border: 1px solid black;
+    border: 4px solid darkslategray;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -261,5 +261,18 @@ body {
 
 .black {
     background-color: black !important;
+}
+
+.logout {
+    display: none;
+    height: 71%;
+    width: 27%;
+    background-color: rgb(101, 63, 63);
+    align-items: center;
+    justify-content: center;
+    font-size: 117%;
+    font-family: monospace;
+    color: white;
+    margin-left: 55%;
 }
 
