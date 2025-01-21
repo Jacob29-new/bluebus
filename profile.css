@@ -21,7 +21,7 @@ body {
 }
 
 .options {
-    width: 60%;
+    width: 34%;
     display: flex;
     justify-content: space-between;
     height: 6%;
@@ -37,7 +37,7 @@ body {
 }
 
 .login-wrapper {
-    width: 30%;
+    width: 48%;
     display: flex;
     flex-direction: column;
     height: 0%;
@@ -60,7 +60,7 @@ body {
 }
 
 .register-wrapper {
-    width: 30%;
+    width: 48%;
     display: flex;
     flex-direction: column;
     height: 643%;
